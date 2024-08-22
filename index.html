@@ -28,8 +28,8 @@
             border: 1px solid #ddd;
             border-radius: 10px;
         }
-        #sell {
-            background-color: #4CAF50; /* Green sell section background */
+        #add-store {
+            background-color: #4CAF50; /* Green add store section background */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -51,24 +51,45 @@
 </head>
 <body>
     <header>
-        <h1>Senctuate E-Market</h1>
-        <p>Buy and Sell Digital Products with Ease!</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#add-store">Add Your Store</a></li>
+            </ul>
+            <img src="SC.png" alt="Senctuate Community Logo" style="width: 100px; height: 100px; object-fit: cover;">
+        </nav>
     </header>
     <main>
         <section class="product-list">
-            <h2>Available Products</h2>
-            <p>Explore our collection of digital products from various sellers.</p>
-            <div id="product-container">
-                <!-- Products will be displayed here -->
+            <h2>Explore Our E-Market</h2>
+            <p>Welcome to Senctuate E-Market, your one-stop digital marketplace for discovering new stores. Browse our collection of stores and visit their websites!</p>
+            <div id="store-container">
+                <!-- Stores will be displayed here -->
+                <div class="product">
+                    <h3>Store Name</h3>
+                    <p>Store Description</p>
+                    <button><a href="#">Visit Store</a></button>
+                </div>
             </div>
         </section>
-        <section id="sell">
-            <h2>Sell Your Digital Products</h2>
-            <p>Reach a wider audience by showcasing your digital products in our e-market. Share your products with our community and start selling today!</p>
-            <form id="sell-form">
-                <!-- existing form fields remain the same -->
+        <section id="add-store">
+            <h2>Add Your Store</h2>
+            <p>Upload your store to our E-Market and connect with customers. Share your store's website with our community today!</p>
+            <form id="add-store-form">
+                <label for="store-name">Store Name:</label>
+                <input type="text" id="store-name" name="store-name"><br><br>
+                <label for="store-image">Store Image:</label>
+                <input type="file" id="store-image" name="store-image" accept="image/*"><br><br>
+                <label for="store-link">Store Link:</label>
+                <input type="text" id="store-link" name="store-link"><br><br>
+                <button id="submit-store">Add Store</button>
             </form>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Senctuate Team</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
