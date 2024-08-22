@@ -3,9 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Senctuate Community</title>
+  <title>Buyer's Page</title>
   <style>
-    /* existing styles */
+    body {
+      background-color: #F7F7F7; /* Soft gray, calming and neutral */
+    }
+    header {
+      background-color: #8BC34A; /* Green, represents growth and harmony */
+    }
+    .product-list {
+      background-color: #FFFFFF; /* White, clean and minimalistic */
+    }
+    .product {
+      border: 1px solid #DDDDDD; /* Light gray, subtle definition */
+      background-color: #F7F7F7; /* Soft gray, calming and neutral */
+    }
+    #sell {
+      background-color: #4CAF50; /* Green, represents growth and harmony */
+    }
+    /* Additional styles */
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+    }
+    h2 {
+      color: #444;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -14,54 +69,41 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#sell">Sell</a></li>
       </ul>
-      <div class="icon-space">
-        <img src="SC.png" alt="Senctuate Community Logo" style="width: 30px; height: 30px;">
-      </div>
     </nav>
   </header>
   <main>
-    <section class="welcome">
-      <h1>Welcome to Senctuate Community!</h1>
-      <p>A sacred space for mental wellness, exploration, and connection.</p>
-      <p>Share your story, shatter the silence. Find solace in solidarity, and celebrate resilience. Share your thoughts, feelings, and experiences, ask for support, and seek guidance by using the space below. Simply type your comment, and share it with the community!</p>
-      <p><strong>Disclaimer: This page is still under construction. Currently, sharing is only available through commenting. Full operational features will be available soon. Thank you for your patience and understanding.</strong></p>
+    <section class="product-list">
+      <h2>Available Products</h2>
+      <div id="product-container">
+        <!-- Products will be displayed here -->
+      </div>
     </section>
-    <section class="status-update">
-      <h2>Community Feed</h2>
-      <div id="disqus_thread"></div>
-      <script>
-        (function() {
-          var d = document, s = d.createElement('script');
-          s.src = '//senctuate.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="(link unavailable)">comments powered by Disqus.</a></noscript>
-      <script id="dsq-count-scr" src="//senctuate.disqus.com/count.js" async></script>
-      <button><a href="#disqus_thread">Share Your Thoughts & Ask Questions</a></button>
-    </section>
-    <section id="about">
-      <h2>About Senctuate Community</h2>
-      <p>Welcome to Senctuate Community, a safe space and online haven for mental health support and connection. We're building a comprehensive platform where individuals can share their stories, find resources, and connect with others who understand their journey.</p>
-      <p>Our mission is to create a stigma-free environment where people can openly discuss their mental health, receive support, and find guidance. We believe that together, we can break down barriers and foster a community that uplifts and empowers each other.</p>
-      <p>By supporting Senctuate Community, you're contributing to a movement that prioritizes mental wellness and connection. Your donation helps us develop and maintain this platform, ensuring it remains a free and accessible resource for all.</p>
-      <p>Show your support by:</p>
-      <ul>
-        <li>Donating to our cause</li>
-        <li>Voting up our content to help us reach a wider audience</li>
-        <li>Sharing your story and experiences with our community</li>
-      </ul>
-      <p>Together, let's create a safe space where mental health matters. Thank you for being part of this journey!</p>
+    <section id="sell">
+      <h2>Sell Your Product</h2>
+      <form id="sell-form">
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="image">Product Image:</label>
+        <input type="file" id="image" name="image" accept="image/*"><br><br>
+        <label for="link">Product Link:</label>
+        <input type="text" id="link" name="link"><br><br>
+        <button id="submit-product">Add Product</button>
+      </form>
     </section>
   </main>
   <footer>
     <p>&copy; 2024 Senctuate Team</p>
-    <button><a href="https://www.paypal.com/donate/?hosted_button_id=YGA8SL4Q8XZAE">Donate Now</a></button>
   </footer>
-  <script src="notifications.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
 
 
